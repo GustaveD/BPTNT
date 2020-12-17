@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +24,28 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@font-face {
+  font-family: "comfortaa";
+  src: url("./assets/fonts/Comfortaa/static/Comfortaa-Regular.ttf"); //mine
+}
+@font-face {
+  font-family: "comfortaaB";
+  src: url("./assets/fonts/Comfortaa/static/Comfortaa-Bold.ttf"); //mine
+}
+
+* {
+  font-family: "comfortaa";
+}
+p {
+  color: black;
+}
+ion-label {
+  font-family: "comfortaaB" !important;
+}
+ion-item {
+  --min-height: 66px;
+}
+ion-back-button {
+  --color: black;
+}

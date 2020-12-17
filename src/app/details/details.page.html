@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>détails</ion-title>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-spinner *ngIf="!imgIsLoaded"></ion-spinner>
+      <ion-img [src]="data.img" (ionImgDidLoad)="loadingImg($event)">
+      </ion-img>
+      <ion-card-title class="ion-margin">id : {{data.id}}</ion-card-title>
+      <ion-card-subtitle class="ion-margin">{{data.title}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item><ion-label>Owner :</ion-label>{{data.owner}}</ion-item>
+      <ion-item><ion-label>Channel:</ion-label>{{data.channel}}</ion-item>
+      <ion-item><ion-label>url: </ion-label><a target="_blank" rel="noopener noreferrer"  href="{{data.url}}">{{data.url}}</a></ion-item>
+   </ion-card-content>
+  </ion-card>
+  <ion-img></ion-img>
+</ion-content>
